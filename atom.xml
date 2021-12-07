@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huhuiming.com/"/>
-  <updated>2021-12-05T14:57:26.649Z</updated>
+  <updated>2021-12-07T14:17:32.105Z</updated>
   <id>https://huhuiming.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建博客过程中遇到的问题</title>
+    <link href="https://huhuiming.com/2021/12/07/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/"/>
+    <id>https://huhuiming.com/2021/12/07/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/</id>
+    <published>2021-12-07T13:46:51.000Z</published>
+    <updated>2021-12-07T14:17:32.105Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、hexo-d-报错&quot;&gt;&lt;a href=&quot;#一、hexo-d-报错&quot; class=&quot;headerlink&quot; title=&quot;一、hexo d 报错&quot;&gt;&lt;/a&gt;一、hexo d 报错&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;fatal: unable to access
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://huhuiming.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="博客" scheme="https://huhuiming.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>终于有自己的博客啦</title>

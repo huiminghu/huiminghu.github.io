@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>搭建博客过程中遇到的问题</title>
+      <link href="/2021/12/07/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/"/>
+      <url>/2021/12/07/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、hexo-d-报错"><a href="#一、hexo-d-报错" class="headerlink" title="一、hexo d 报错"></a>一、hexo d 报错</h2><pre><code>fatal: unable to access &#39;https://github.com/huiminghu/huiminghu.github.io.git/&#39;: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443</code></pre><p>将config.xml的repository url<br>由<code>https://github.com/huiminghu/huiminghu.github.io.git</code><br>改为<code>git@github.com:huiminghu/huiminghu.github.io.git</code>。</p><h2 id="二、执行n-latest安装node最新版本时报错"><a href="#二、执行n-latest安装node最新版本时报错" class="headerlink" title="二、执行n latest安装node最新版本时报错"></a>二、执行n latest安装node最新版本时报错</h2><pre><code>Error: sudo required (or change ownership, or define N_PREFIX)</code></pre><p>答案原地址：<a href="https://stackoverflow.com/questions/61677951/why-n-throws-error-error-sudo-required-or-change-ownership-or-define-n-prefi" target="_blank" rel="noopener">stackoverflow</a></p><ol><li>You would need to change where n stores node versions ownership<pre><code>sudo mkdir -p /usr/local/n &amp;&amp; sudo chown -R $(whoami) /usr/local/n/</code></pre></li><li>Add yourself to the group and grant write permission<pre><code>sudo dseditgroup -o edit -a $(whoami) -t user wheel</code></pre></li><li>Allow wheel members writing permission on that folder<pre><code>sudo chmod -R g+w /usr/local/n/</code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>终于有自己的博客啦</title>
       <link href="/2021/12/05/zhong-yu-you-zi-ji-de-bo-ke-la/"/>
       <url>/2021/12/05/zhong-yu-you-zi-ji-de-bo-ke-la/</url>
