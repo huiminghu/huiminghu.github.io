@@ -4,11 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="搭建博客过程中遇到的问题, 8gMaker的博客">
+    <meta name="keywords" content="设计模式概述, 8gMaker的博客">
     <meta name="baidu-site-verification" content="code-GDoiV425Ps">
     <meta name="google-site-verification" content="xxx">
     <meta name="360-site-verification" content="xxx">
-    <meta name="description" content="一、hexo d 报错fatal: unable to access &amp;#39;https://github.com/huiminghu/huiminghu.github.io.git/&amp;#39;: LibreSSL SSL_connect">
+    <meta name="description" content="什么是设计模式设计模式是指在软件设计中，被人反复使用的、经过分类编目的、代码设计经验的总结。使用设计模式的目的是为了可重用代码，提高代码的可扩展性和可维护性。
+设计模式七大原则面向对象的设计模式有七大基本原则：
+
+开闭原则
+单一职责原则
+里">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>搭建博客过程中遇到的问题 | 8gMaker的博客</title>
+    <title>设计模式概述 | 8gMaker的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -294,13 +299,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        搭建博客过程中遇到的问题
+                        设计模式概述
                     </div>
                 </div>
             </div>
@@ -423,8 +428,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/随笔/" class="post-category" target="_blank">
-                            随笔
+                        <a href="/categories/设计模式/" class="post-category" target="_blank">
+                            设计模式
                         </a>
                         
                     </div>
@@ -435,7 +440,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-07
+                    2021-12-11
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -449,7 +454,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    134
+                    340
                 </div>
                 
 
@@ -472,14 +477,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、hexo-d-报错"><a href="#一、hexo-d-报错" class="headerlink" title="一、hexo d 报错"></a>一、hexo d 报错</h2><pre><code>fatal: unable to access &#39;https://github.com/huiminghu/huiminghu.github.io.git/&#39;: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443</code></pre><p>将config.xml的repository url<br>由<code>https://github.com/huiminghu/huiminghu.github.io.git</code><br>改为<code>git@github.com:huiminghu/huiminghu.github.io.git</code>。</p>
-<h2 id="二、执行n-latest安装node最新版本时报错"><a href="#二、执行n-latest安装node最新版本时报错" class="headerlink" title="二、执行n latest安装node最新版本时报错"></a>二、执行n latest安装node最新版本时报错</h2><pre><code>Error: sudo required (or change ownership, or define N_PREFIX)</code></pre><p>答案原地址：<a href="https://stackoverflow.com/questions/61677951/why-n-throws-error-error-sudo-required-or-change-ownership-or-define-n-prefi" target="_blank" rel="noopener">stackoverflow</a></p>
-<ol>
-<li>You would need to change where n stores node versions ownership<pre><code>sudo mkdir -p /usr/local/n &amp;&amp; sudo chown -R $(whoami) /usr/local/n/</code></pre></li>
-<li>Add yourself to the group and grant write permission<pre><code>sudo dseditgroup -o edit -a $(whoami) -t user wheel</code></pre></li>
-<li>Allow wheel members writing permission on that folder<pre><code>sudo chmod -R g+w /usr/local/n/</code></pre></li>
-</ol>
-
+                <h2 id="什么是设计模式"><a href="#什么是设计模式" class="headerlink" title="什么是设计模式"></a>什么是设计模式</h2><p>设计模式是指在软件设计中，被人反复使用的、经过分类编目的、代码设计经验的总结。<br>使用设计模式的目的是为了可重用代码，提高代码的可扩展性和可维护性。</p>
+<h2 id="设计模式七大原则"><a href="#设计模式七大原则" class="headerlink" title="设计模式七大原则"></a>设计模式七大原则</h2><p>面向对象的设计模式有七大基本原则：</p>
+<ul>
+<li>开闭原则</li>
+<li>单一职责原则</li>
+<li>里氏替换原则</li>
+<li>依赖倒置原则</li>
+<li>接口隔离原则</li>
+<li>迪米特原则/最少知识原则</li>
+<li>合成/聚合复用原则</li>
+</ul>
+<h3 id="开闭原则"><a href="#开闭原则" class="headerlink" title="开闭原则"></a>开闭原则</h3><p>对扩展开放，对修改关闭。</p>
+<h3 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h3><p>一个类只负责一个功能领域中的相应职责。</p>
+<h3 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h3><p>所有引用基类的地方必须能透明地使用其子类的对象。</p>
+<h3 id="依赖倒置原则"><a href="#依赖倒置原则" class="headerlink" title="依赖倒置原则"></a>依赖倒置原则</h3><p>依赖于抽象，不能依赖于具体实现。</p>
+<h3 id="接口隔离原则"><a href="#接口隔离原则" class="headerlink" title="接口隔离原则"></a>接口隔离原则</h3><p>类之间的依赖关系应该建立在最小的接口上。</p>
+<h3 id="迪米特原则-最少知识原则"><a href="#迪米特原则-最少知识原则" class="headerlink" title="迪米特原则/最少知识原则"></a>迪米特原则/最少知识原则</h3><p>一个软件实体应当尽可能少的与其它实体发生相互作用。</p>
+<h3 id="合成-聚合复用原则"><a href="#合成-聚合复用原则" class="headerlink" title="合成/聚合复用原则"></a>合成/聚合复用原则</h3><p>尽量使用合成/聚合，而不是继承达到复用的目的。</p>
+<h2 id="设计模式类型"><a href="#设计模式类型" class="headerlink" title="设计模式类型"></a>设计模式类型</h2><h3 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h3><h3 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h3><h3 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h3>
             </div>
             <hr />
 
@@ -513,9 +529,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《搭建博客过程中遇到的问题》
+                    《设计模式概述》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/07/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/11/she-ji-mo-shi-gai-shu/" property="cc:attributionName"
                rel="cc:attributionURL">
                 8gMaker
             </a> 采用
@@ -555,9 +571,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/12/11/she-ji-mo-shi-gai-shu/">
                     <div class="card-image">
@@ -580,9 +597,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -595,6 +612,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -613,24 +631,24 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/05/zhong-yu-you-zi-ji-de-bo-ke-la/">
+                <a href="/2021/12/07/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="终于有自己的博客啦">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="搭建博客过程中遇到的问题">
                         
-                        <span class="card-title">终于有自己的博客啦</span>
+                        <span class="card-title">搭建博客过程中遇到的问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                              几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + git
+                            一、hexo d 报错fatal: unable to access &#39;https://github.com/huiminghu/huiminghu.github.io.git/&#39;: LibreSSL SSL_connect
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-07
                             </span>
                         <span class="publish-author">
                             
