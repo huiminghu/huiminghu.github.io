@@ -298,7 +298,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -453,14 +453,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    8 分
                 </div>
                 
                 
@@ -503,7 +503,7 @@
 <h4 id="6-迪米特原则-最少知识原则"><a href="#6-迪米特原则-最少知识原则" class="headerlink" title="6. 迪米特原则/最少知识原则"></a>6. 迪米特原则/最少知识原则</h4><p><strong>一个软件实体应当尽可能少的与其他实体发生相互作用。</strong> 迪米特原则不希望类之间建立直接的联系，如果真的需要建立联系，也希望通过它的友元类（中间类或跳转类）来转达。</p>
 <h4 id="7-合成-聚合复用原则"><a href="#7-合成-聚合复用原则" class="headerlink" title="7. 合成/聚合复用原则"></a>7. 合成/聚合复用原则</h4><p><strong>尽量使用合成/聚合，而不是继承达到复用的目的</strong>。继承是“白箱”复用，合成/聚合是“黑箱”复用。一般情况下，只有明确知道派生类和基类满足<code>IS A</code>的时候才选用继承，当满足<code>HAS A</code>或者不能判断的情况下应该选用合成/聚合。</p>
 <h2 id="三、设计模式类型"><a href="#三、设计模式类型" class="headerlink" title="三、设计模式类型"></a>三、设计模式类型</h2><h4 id="1-创建型模式"><a href="#1-创建型模式" class="headerlink" title="1. 创建型模式"></a>1. 创建型模式</h4><p>创建型模式的主要关注点是”怎样创建对象”，它的主要特点是”将对象的创建和使用分离”。这样可以降低系统的耦合度，使用者不需要关注对象的创建细节，对象的创建由相关的工厂来完成。</p>
-<p>创建型模式分为以下5种:</p>
+<p>创建型模式分为以下5种：</p>
 <ol>
 <li><strong>单例模式</strong><br>某个类只能生成一个实例，该类提供了一个全局访问点供外部获取该实例。</li>
 <li><strong>原型模式</strong><br>将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。</li>
@@ -525,7 +525,24 @@
 <li><strong>组合模式</strong><br>将对象组合成树状层次结构，使用户对单个对象和组合对象具有一致的访问性。</li>
 </ol>
 <p>以上7种结构型模式，除了适配器模式分为类结构型模式和对象结构型模式两种，其他全部属于对象结构型模式。</p>
-<h4 id="3-行为型模式"><a href="#3-行为型模式" class="headerlink" title="3. 行为型模式"></a>3. 行为型模式</h4>
+<h4 id="3-行为型模式"><a href="#3-行为型模式" class="headerlink" title="3. 行为型模式"></a>3. 行为型模式</h4><p>行为型模式用于描述程序在运行时复杂的流程控制，即描述多个类或对象之间怎样互相协作共同完成单个对象无法完成的任务，它涉及算法与对象间职责的分配。</p>
+<p>行为型模式分为类行为模式和对象行为模式，前者采用继承机制在类间分派行为，后者采用组合或聚合在对象间分派行为。由于组合关系或聚合关系比继承关系耦合度低，所以对象行为模式比类行为模式有更大的灵活性。</p>
+<p>行为型模式分为以下11种：</p>
+<ol>
+<li><strong>模板方法模式</strong><br>定义一个操作中的算法骨架，将算法的一些步骤延迟到子类中，使得子类在不改变该算法结构的情况下，重新定义该算法的某些特定步骤。</li>
+<li><strong>策略模式</strong><br>定义了一系列算法，并将每个算法封装起来，使它们可以相互替换，且算法的改变不会影响使用算法的客户。</li>
+<li><strong>命令模式</strong><br>将一个请求封装为一个对象，使发出请求的责任和执行请求的责任分开。</li>
+<li><strong>职责链模式</strong><br>把请求从链中的一个对象传递到另一个对象，直到请求被响应为止。通过这种方式去除对象之间的耦合。</li>
+<li><strong>状态模式</strong><br>允许一个对象在其内部状态发生改变时改变其行为能力。</li>
+<li><strong>观察者模式</strong><br>多个对象间存在一对多关系，当一个对象发生改变时，把这种改变通知给其他多个对象，从而影响其他对象的行为。</li>
+<li><strong>中介者模式</strong><br>定义一个中介对象来简化原有对象之间的交互关系，降低系统中对象间的耦合度，使原有对象之间不必相互了解。</li>
+<li><strong>迭代器模式</strong><br>提供一种方法来顺序访问聚合对象中的一系列数据，而不暴露聚合对象的内部表示。</li>
+<li><strong>访问者模式</strong><br>在不改变集合元素的前提下，为一个集合中的每个元素提供多种访问方式，即每个元素有多个访问者对象访问。</li>
+<li><strong>备忘录模式</strong><br>在不破坏封装性的前提下，获取并保存一个对象的内部状态，以便以后恢复它。</li>
+<li><strong>解释器模式</strong><br>提供如何定义语言的文法，以及对语言句子的解释方法。</li>
+</ol>
+<p>以上11种行为型模式，除了模板方法模式和解释器模式是类行为模式，其他都是对象行为型模式。</p>
+
             </div>
             <hr />
 
@@ -610,7 +627,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="设计模式概述">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="设计模式概述">
                         
                         <span class="card-title">设计模式概述</span>
                     </div>
@@ -664,7 +681,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="搭建博客过程中遇到的问题">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="搭建博客过程中遇到的问题">
                         
                         <span class="card-title">搭建博客过程中遇到的问题</span>
                     </div>
@@ -869,7 +886,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.3k</span>
+            <span class="white-color">3k</span>
             
 
             <br>
