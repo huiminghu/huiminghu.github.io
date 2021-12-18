@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>性能优化</title>
+      <link href="/2021/12/18/xing-neng-you-hua/"/>
+      <url>/2021/12/18/xing-neng-you-hua/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。</p><h3 id="定位慢接口-慢SQL"><a href="#定位慢接口-慢SQL" class="headerlink" title="定位慢接口/慢SQL"></a>定位慢接口/慢SQL</h3><ol><li>在代码中通过StopWatch打印代码段或接口执行时间；</li><li>通过公司自研工具Hippo Monitor-&gt;服务监控-&gt;调用链监控-&gt;输入接口名称查询耗时；</li><li>通过阿里巴巴开源的Java诊断工具arthas追踪各接口执行时间。</li></ol><h3 id="导致慢的原因及解决方案"><a href="#导致慢的原因及解决方案" class="headerlink" title="导致慢的原因及解决方案"></a>导致慢的原因及解决方案</h3><h4 id="一、粗粒度"><a href="#一、粗粒度" class="headerlink" title="一、粗粒度"></a>一、粗粒度</h4><h5 id="1-单线程处理大数据"><a href="#1-单线程处理大数据" class="headerlink" title="1. 单线程处理大数据"></a>1. 单线程处理大数据</h5><p>改完多线程处理。</p><h5 id="2-某个操作-方法执行次数太多"><a href="#2-某个操作-方法执行次数太多" class="headerlink" title="2. 某个操作/方法执行次数太多"></a>2. 某个操作/方法执行次数太多</h5><p>比如我们使用easy excel导入时，在一个for循环中使用poi的CellStyle.cloneStyleFrom方法拷贝单元格样式，耗时非常严重。</p><p>在for循环外面定义一个或几个变量保存拷贝过的样式，如果样式已存在，直接返回，不需要每次都拷贝。</p><h4 id="二、细粒度"><a href="#二、细粒度" class="headerlink" title="二、细粒度"></a>二、细粒度</h4><h5 id="1-慢SQL"><a href="#1-慢SQL" class="headerlink" title="1. 慢SQL"></a>1. 慢SQL</h5><ul><li>根据业务，优化SQL实现逻辑</li><li>让SQL尽可能走索引</li><li>修改SQL写法（需要一定经验或多次尝试）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 性能优化 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>美妙生活之租房被套路</title>
       <link href="/2021/12/18/mei-miao-sheng-huo-zhi-zu-fang-bei-tao-lu/"/>
       <url>/2021/12/18/mei-miao-sheng-huo-zhi-zu-fang-bei-tao-lu/</url>

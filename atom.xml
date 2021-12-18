@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huhuiming.com/"/>
-  <updated>2021-12-18T13:34:12.240Z</updated>
+  <updated>2021-12-18T14:17:13.651Z</updated>
   <id>https://huhuiming.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>性能优化</title>
+    <link href="https://huhuiming.com/2021/12/18/xing-neng-you-hua/"/>
+    <id>https://huhuiming.com/2021/12/18/xing-neng-you-hua/</id>
+    <published>2021-12-18T13:43:58.000Z</published>
+    <updated>2021-12-18T14:17:13.651Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;前提&quot;&gt;&lt;a href=&quot;#前提&quot; class=&quot;headerlink&quot; title=&quot;前提&quot;&gt;&lt;/a&gt;前提&lt;/h3&gt;&lt;p&gt;最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。&lt;/p&gt;
+&lt;h3 id=&quot;定位慢接口-慢SQL&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="性能优化" scheme="https://huhuiming.com/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+    
+      <category term="博客" scheme="https://huhuiming.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>美妙生活之租房被套路</title>

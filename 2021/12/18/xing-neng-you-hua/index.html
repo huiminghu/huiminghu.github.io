@@ -4,13 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="美妙生活之租房被套路, 8gMaker的博客">
+    <meta name="keywords" content="性能优化, 8gMaker的博客">
     <meta name="baidu-site-verification" content="code-GDoiV425Ps">
     <meta name="google-site-verification" content="xxx">
     <meta name="360-site-verification" content="xxx">
-    <meta name="description" content="前提我和同事准备合租，前前后后找了很多地方，最后选中了一个小区，然后通过小区中介开始找房子，于是就有了下面被套路的经历。
-租房套路
-中介根据你的身份以及你的预算，给你找1套或2套特别合适的房子，然后给你报个价钱，你可能会出低一点，即便超出底">
+    <meta name="description" content="前提最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。
+定位慢接口/慢SQL
+在代码中通过StopWatch打印代码段或接口执行时间；
+通过公司自研工具Hippo Monitor-&amp;gt;服务监控-&amp;gt;调用链监控-&amp;gt">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>美妙生活之租房被套路 | 8gMaker的博客</title>
+    <title>性能优化 | 8gMaker的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -296,13 +297,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        美妙生活之租房被套路
+                        性能优化
                     </div>
                 </div>
             </div>
@@ -425,8 +426,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/生活/" class="post-category" target="_blank">
-                            生活
+                        <a href="/categories/性能优化/" class="post-category" target="_blank">
+                            性能优化
                         </a>
                         
                     </div>
@@ -451,14 +452,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    811
+                    279
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
                 
@@ -474,19 +475,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><p>我和同事准备合租，前前后后找了很多地方，最后选中了一个小区，然后通过小区中介开始找房子，于是就有了下面被套路的经历。</p>
-<h4 id="租房套路"><a href="#租房套路" class="headerlink" title="租房套路"></a>租房套路</h4><ol>
-<li>中介根据你的身份以及你的预算，给你找1套或2套特别合适的房子，然后给你报个价钱，你可能会出低一点，即便超出底线，他也会答应你，帮你和房东去谈。</li>
-<li>如果看得出你喜欢之前的房子，下次就会带你去看价格很贵或者同等价格但是不好的房子，这样你就会觉得最初的几套好。</li>
-<li>如果你定了具体的某一套房子，会把你叫过去和房东聊，而且之前会交代你一些事情（包括让你先转押金，表现出你真的想租这套房，到时容易和房东谈妥价格等等），让你配合他。到了之后你和房东、中介一起交谈，不一会房东会出去接个电话或者打个电话（这个也是当初中介和房东商量好的），然后中介会说是之前有人也看过房子，而且价格更高，一般高出400-500吧，房东这会出去接电话，多半是因为这个事情。</li>
-<li>接电话回来以后，房东一般会说要几个小时后才做决定，然后中介会直接挑明这个话题，问房东是不是要等上一个看房的人做决定，他们这样一配合，会让你觉得这个房子有点抢手。然后中介会让房东回去，再在你面前假装各种出谋划策，表现出为你争取这套房子的努力。</li>
-<li>最后中介和你说，可不可以提高一下价格，因为房子很有可能租给别人，如果你提高了，那么你就上钩了。对于着急租房的人，这样的套路成功率很高！</li>
+                <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。</p>
+<h3 id="定位慢接口-慢SQL"><a href="#定位慢接口-慢SQL" class="headerlink" title="定位慢接口/慢SQL"></a>定位慢接口/慢SQL</h3><ol>
+<li>在代码中通过StopWatch打印代码段或接口执行时间；</li>
+<li>通过公司自研工具Hippo Monitor-&gt;服务监控-&gt;调用链监控-&gt;输入接口名称查询耗时；</li>
+<li>通过阿里巴巴开源的Java诊断工具arthas追踪各接口执行时间。</li>
 </ol>
-<h4 id="小感悟"><a href="#小感悟" class="headerlink" title="小感悟"></a>小感悟</h4><p>这套做法最高明之处就是分别透漏给房东和租客有限的信息（更多时候是只透漏给租客有限的信息），然后给他们指出对自己有利的做法，双方为了自己，纷纷尽情表演，殊不知这一切都是中介导演的。</p>
-<p>生活中很多时候就是这样，由于我们掌握的信息有限，再加上一些客观因素，比如急于做成某件事情，导致一时难以做出最清晰的决定。</p>
-<p>希望以后的日子里，在做一些重大决定的时候，可以冷静一点，尽量搜集更多的信息，这样才能做出相对理智的决定。对于那些不太重要的决定，也不需要那么斤斤计较，毕竟太理智，生活就没有乐趣了。</p>
-<p>租房子就是一个不重要的事情，被套路就被套路了，重要的是和谁一起被套路！[捂脸]</p>
-<p>我的同事说“享受吧，被别人套，以后就会套人（肯定不会，哈哈），或防套”，“生活就是这样，防不胜防，关键是看代价有多大”。</p>
+<h3 id="导致慢的原因及解决方案"><a href="#导致慢的原因及解决方案" class="headerlink" title="导致慢的原因及解决方案"></a>导致慢的原因及解决方案</h3><h4 id="一、粗粒度"><a href="#一、粗粒度" class="headerlink" title="一、粗粒度"></a>一、粗粒度</h4><h5 id="1-单线程处理大数据"><a href="#1-单线程处理大数据" class="headerlink" title="1. 单线程处理大数据"></a>1. 单线程处理大数据</h5><p>改完多线程处理。</p>
+<h5 id="2-某个操作-方法执行次数太多"><a href="#2-某个操作-方法执行次数太多" class="headerlink" title="2. 某个操作/方法执行次数太多"></a>2. 某个操作/方法执行次数太多</h5><p>比如我们使用easy excel导入时，在一个for循环中使用poi的CellStyle.cloneStyleFrom方法拷贝单元格样式，耗时非常严重。</p>
+<p>在for循环外面定义一个或几个变量保存拷贝过的样式，如果样式已存在，直接返回，不需要每次都拷贝。</p>
+<h4 id="二、细粒度"><a href="#二、细粒度" class="headerlink" title="二、细粒度"></a>二、细粒度</h4><h5 id="1-慢SQL"><a href="#1-慢SQL" class="headerlink" title="1. 慢SQL"></a>1. 慢SQL</h5><ul>
+<li>根据业务，优化SQL实现逻辑</li>
+<li>让SQL尽可能走索引</li>
+<li>修改SQL写法（需要一定经验或多次尝试）</li>
+</ul>
 
             </div>
             <hr />
@@ -521,9 +523,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《美妙生活之租房被套路》
+                    《性能优化》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/18/mei-miao-sheng-huo-zhi-zu-fang-bei-tao-lu/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/18/xing-neng-you-hua/" property="cc:attributionName"
                rel="cc:attributionURL">
                 8gMaker
             </a> 采用
@@ -563,9 +565,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/12/18/xing-neng-you-hua/">
                     <div class="card-image">
@@ -586,9 +589,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -601,6 +604,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -619,35 +623,33 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/11/she-ji-mo-shi-gai-shu/">
+                <a href="/2021/12/18/mei-miao-sheng-huo-zhi-zu-fang-bei-tao-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="设计模式概述">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="美妙生活之租房被套路">
                         
-                        <span class="card-title">设计模式概述</span>
+                        <span class="card-title">美妙生活之租房被套路</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、什么是设计模式设计模式是指在软件设计中，被人反复使用的、经过分类编目的、代码设计经验的总结。使用设计模式的目的是为了可重用代码，提高代码的可扩展性和可维护性。
-二、设计模式七大原则面向对象的设计模式有七大基本原则：
-
-开闭原则
-单一职责
+                            前提我和同事准备合租，前前后后找了很多地方，最后选中了一个小区，然后通过小区中介开始找房子，于是就有了下面被套路的经历。
+租房套路
+中介根据你的身份以及你的预算，给你找1套或2套特别合适的房子，然后给你报个价钱，你可能会出低一点，即便超出底
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-11
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/设计模式/" class="post-category" target="_blank">
-                                    设计模式
+                            <a href="/categories/生活/" class="post-category" target="_blank">
+                                    生活
                                 </a>
                             
                             
