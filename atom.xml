@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huhuiming.com/"/>
-  <updated>2021-12-18T14:17:13.651Z</updated>
+  <updated>2021-12-18T14:32:29.776Z</updated>
   <id>https://huhuiming.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>美妙生活之自习室被夸奖</title>
+    <link href="https://huhuiming.com/2021/12/18/mei-miao-sheng-huo-zhi-zi-xi-shi-bei-kua-jiang/"/>
+    <id>https://huhuiming.com/2021/12/18/mei-miao-sheng-huo-zhi-zi-xi-shi-bei-kua-jiang/</id>
+    <published>2021-12-18T14:23:06.000Z</published>
+    <updated>2021-12-18T14:32:29.776Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在自习室写代码，旁边的小哥哥问”您这个是Python吗？”，我说”不是，是Java开发语言”。&lt;/p&gt;
+&lt;p&gt;他若有所思地点点头，竖起了大拇指，然后说编程是一项很需要掌握的技术。他介绍自己是做金融的，公司里面也有很多程序员，他很羡慕，说想学Python去分析数据。我鼓励他P
+        
+      
+    
+    </summary>
+    
+      <category term="生活" scheme="https://huhuiming.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="博客" scheme="https://huhuiming.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>性能优化</title>
