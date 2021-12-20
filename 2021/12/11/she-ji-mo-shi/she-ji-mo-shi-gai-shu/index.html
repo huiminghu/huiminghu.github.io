@@ -4,11 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="终于有自己的博客啦, 8gMaker的博客">
+    <meta name="keywords" content="设计模式概述, 8gMaker的博客">
     <meta name="baidu-site-verification" content="code-GDoiV425Ps">
     <meta name="google-site-verification" content="xxx">
     <meta name="360-site-verification" content="xxx">
-    <meta name="description" content="  几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + git">
+    <meta name="description" content="一、什么是设计模式设计模式是指在软件设计中，被人反复使用的、经过分类编目的、代码设计经验的总结。使用设计模式的目的是为了可重用代码，提高代码的可扩展性和可维护性。
+二、设计模式七大原则面向对象的设计模式有七大基本原则：
+
+开闭原则
+单一职责">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>终于有自己的博客啦 | 8gMaker的博客</title>
+    <title>设计模式概述 | 8gMaker的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -294,13 +298,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        终于有自己的博客啦
+                        设计模式概述
                     </div>
                 </div>
             </div>
@@ -423,8 +427,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/博客/" class="post-category" target="_blank">
-                            博客
+                        <a href="/categories/设计模式/" class="post-category" target="_blank">
+                            设计模式
                         </a>
                         
                     </div>
@@ -435,7 +439,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-05
+                    2021-12-11
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -449,14 +453,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    225
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
                 
@@ -472,8 +476,72 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>  几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + github pages，刚开始搭建出来，觉得这页面丑爆了，于是在网上搜索是否有修改样式的教程，很幸运看到了韦阳老师开源的hexo-theme-sungod，看到了自己真正喜欢的博客的样子，于是立马star&amp;fork了这个项目，在此基础上做了简单修改，就有了我现在博客的样子。</p>
-<p>  以后我要在这个博客上写下自己的点点滴滴，这个才是真正意义上属于自己的博客！</p>
+                <h2 id="一、什么是设计模式"><a href="#一、什么是设计模式" class="headerlink" title="一、什么是设计模式"></a>一、什么是设计模式</h2><p>设计模式是指在软件设计中，被人反复使用的、经过分类编目的、代码设计经验的总结。<br>使用设计模式的目的是为了可重用代码，提高代码的可扩展性和可维护性。</p>
+<h2 id="二、设计模式七大原则"><a href="#二、设计模式七大原则" class="headerlink" title="二、设计模式七大原则"></a>二、设计模式七大原则</h2><p>面向对象的设计模式有七大基本原则：</p>
+<ul>
+<li>开闭原则</li>
+<li>单一职责原则</li>
+<li>里氏替换原则</li>
+<li>依赖倒置原则</li>
+<li>接口隔离原则</li>
+<li>迪米特原则/最少知识原则</li>
+<li>合成/聚合复用原则</li>
+</ul>
+<h4 id="1-开闭原则"><a href="#1-开闭原则" class="headerlink" title="1. 开闭原则"></a>1. 开闭原则</h4><p>一个软件实体，如类、模块和函数应该<strong>对扩展开放，对修改关闭</strong>。模块应尽量在不修改原码的情况下进行扩展，防止引入新的错误。</p>
+<h5 id="如何实现对扩展开放，对修改关闭"><a href="#如何实现对扩展开放，对修改关闭" class="headerlink" title="如何实现对扩展开放，对修改关闭"></a>如何实现对扩展开放，对修改关闭</h5><p>需要对系统进行抽象化设计，抽象可以基于抽象类或接口。</p>
+<ol>
+<li>通过接口或抽象类约束扩展，对扩展进行边界限定，不允许出现在抽象类或接口中不存在的public方法，也就是扩展必须添加具体实现而不是修改具体方法。</li>
+<li>参数类型、引用对象尽量使用接口或抽象类，而不是实现类，这样就能尽量保证抽象层是稳定的。</li>
+<li>一般抽象模块设计完成，不允许修改接口或者抽象方法的定义。</li>
+</ol>
+<h4 id="2-单一职责原则"><a href="#2-单一职责原则" class="headerlink" title="2. 单一职责原则"></a>2. 单一职责原则</h4><p><strong>一个类只负责一个功能领域中的相应职责。</strong> 职责太多会导致职责耦合在一起，一个职责的变化会影响其他职责。此原则的核心就是解耦和增强内聚性。</p>
+<h4 id="3-里氏替换原则"><a href="#3-里氏替换原则" class="headerlink" title="3. 里氏替换原则"></a>3. 里氏替换原则</h4><p><strong>所有引用基类的地方必须能透明地使用其子类的对象。</strong> 里氏替换原则是对开闭原则的补充，开闭原则的关键步骤是抽象化，而基类与子类的继承关系就是抽象化的具体实现。</p>
+<h4 id="4-依赖倒置原则"><a href="#4-依赖倒置原则" class="headerlink" title="4. 依赖倒置原则"></a>4. 依赖倒置原则</h4><p><strong>程序要依赖于抽象接口，不能依赖于具体实现。</strong></p>
+<p>依赖倒置原则要求我们在程序代码中传递参数时或在关联关系中，尽量引用层次高的抽象层类，即使用接口和抽象类进行变量类型声明、参数类型声明、方法返回类型声明，以及数据类型的转换等，而不要用具体类来做这些事情。为了确保该原则的应用，一个具体类应当只实现接口或抽象类中声明过的方法，而不要给出多余的方法，否则将导致无法调到在子类中增加的新方法。在引入抽象层后，系统将具有很好的灵活性，在程序中尽量使用抽象层进行编程，而将具体类写在配置文件中，这样一来，如果系统行为发生变化，只需对抽象层进行扩展，并修改配置文件，而无需修改原系统的源代码，在不修改的情况下来扩展系统的功能，满足开闭原则。</p>
+<p>在实现依赖倒置原则时，我们需要针对抽象层编程，而将具体类的对象通过依赖注入的方式注入到其他对象中，依赖注入是指当一个对象要与其他对象发生依赖关系时，通过抽象来注入所依赖的对象。常用的注入方式有构造注入、Set注入和接口注入。Spring IOC是此实现的典范。</p>
+<h4 id="5-接口隔离原则"><a href="#5-接口隔离原则" class="headerlink" title="5. 接口隔离原则"></a>5. 接口隔离原则</h4><p>客户端不应该依赖它不需要的接口，<strong>类之间的依赖关系应该建立在最小的接口上</strong>。简单来说就是建立单一的接口，使接口尽量细化，同时接口中的方法尽量少。</p>
+<h4 id="6-迪米特原则-最少知识原则"><a href="#6-迪米特原则-最少知识原则" class="headerlink" title="6. 迪米特原则/最少知识原则"></a>6. 迪米特原则/最少知识原则</h4><p><strong>一个软件实体应当尽可能少的与其他实体发生相互作用。</strong> 迪米特原则不希望类之间建立直接的联系，如果真的需要建立联系，也希望通过它的友元类（中间类或跳转类）来转达。</p>
+<h4 id="7-合成-聚合复用原则"><a href="#7-合成-聚合复用原则" class="headerlink" title="7. 合成/聚合复用原则"></a>7. 合成/聚合复用原则</h4><p><strong>尽量使用合成/聚合，而不是继承达到复用的目的</strong>。继承是“白箱”复用，合成/聚合是“黑箱”复用。一般情况下，只有明确知道派生类和基类满足<code>IS A</code>的时候才选用继承，当满足<code>HAS A</code>或者不能判断的情况下应该选用合成/聚合。</p>
+<h2 id="三、设计模式类型"><a href="#三、设计模式类型" class="headerlink" title="三、设计模式类型"></a>三、设计模式类型</h2><h4 id="1-创建型模式"><a href="#1-创建型模式" class="headerlink" title="1. 创建型模式"></a>1. 创建型模式</h4><p>创建型模式的主要关注点是”怎样创建对象”，它的主要特点是”将对象的创建和使用分离”。这样可以降低系统的耦合度，使用者不需要关注对象的创建细节，对象的创建由相关的工厂来完成。</p>
+<p>创建型模式分为以下5种：</p>
+<ol>
+<li><strong>单例模式</strong><br>某个类只能生成一个实例，该类提供了一个全局访问点供外部获取该实例。</li>
+<li><strong>原型模式</strong><br>将一个对象作为原型，通过对其进行复制而克隆出多个和原型类似的新实例。</li>
+<li><strong>工厂方法模式</strong><br>定义一个用于创建产品的接口，由子类决定生产什么产品。</li>
+<li><strong>抽象工厂模式</strong><br>提供一个创建产品族的接口，其每个子类可以生产一系列相关的产品。</li>
+<li><strong>建造者模式</strong><br>将一个复杂对象分解成多个相对简单的部分，然后根据不同需要分别创建他们，最后构建成该复杂对象。</li>
+</ol>
+<p>以上5种创建型模式，除了工厂方法模式属于类创建型模式，其他的全部属于对象创建型模式。</p>
+<h4 id="2-结构型模式"><a href="#2-结构型模式" class="headerlink" title="2. 结构型模式"></a>2. 结构型模式</h4><p>结构型模式描述如何将类或对象按某种布局组成更大的结构。它分为类结构型模式和对象结构型模式，前者采用<strong>继承机制</strong>来组织接口和类，后者采用<strong>组合或聚合</strong>来组合对象。</p>
+<p>由于组合关系或聚合关系比继承关系耦合度更低，所以对象结构型模式比类结构型模式具有更大的灵活性。</p>
+<p>结构型模式分为以下7种：</p>
+<ol>
+<li><strong>代理模式</strong><br>为某个对象提供一种代理以控制对该对象的访问。即客户端通过代理间接访问该对象，从而限制、增强或修改该对象的一些特性。</li>
+<li><strong>适配器模式</strong><br>将一个类的接口转换成客户希望的另一个接口，使得原本由于接口不兼容而不能一起工作的那些类能一起工作。</li>
+<li><strong>桥接模式</strong><br>将抽象与实现分离，使它们可以独立变化。它是用组合关系代替继承关系来实现的，从而降低了抽象和实现这两个可变维度的耦合度。</li>
+<li><strong>装饰模式</strong><br>动态地给对象增加一些职责，即增加额外的功能。</li>
+<li><strong>外观模式</strong><br>为多个复杂的子系统提供一个一致的接口，使得这些子系统更容易被访问。</li>
+<li><strong>享元模式</strong><br>运用共享技术来有效地支持大量细粒度对象的复用。</li>
+<li><strong>组合模式</strong><br>将对象组合成树状层次结构，使用户对单个对象和组合对象具有一致的访问性。</li>
+</ol>
+<p>以上7种结构型模式，除了适配器模式分为类结构型模式和对象结构型模式两种，其他全部属于对象结构型模式。</p>
+<h4 id="3-行为型模式"><a href="#3-行为型模式" class="headerlink" title="3. 行为型模式"></a>3. 行为型模式</h4><p>行为型模式用于描述程序在运行时复杂的流程控制，即描述多个类或对象之间怎样互相协作共同完成单个对象无法完成的任务，它涉及算法与对象间职责的分配。</p>
+<p>行为型模式分为类行为模式和对象行为模式，前者采用继承机制在类间分派行为，后者采用组合或聚合在对象间分派行为。由于组合关系或聚合关系比继承关系耦合度低，所以对象行为模式比类行为模式有更大的灵活性。</p>
+<p>行为型模式分为以下11种：</p>
+<ol>
+<li><strong>模板方法模式</strong><br>定义一个操作中的算法骨架，将算法的一些步骤延迟到子类中，使得子类在不改变该算法结构的情况下，重新定义该算法的某些特定步骤。</li>
+<li><strong>策略模式</strong><br>定义了一系列算法，并将每个算法封装起来，使它们可以相互替换，且算法的改变不会影响使用算法的客户。</li>
+<li><strong>命令模式</strong><br>将一个请求封装为一个对象，使发出请求的责任和执行请求的责任分开。</li>
+<li><strong>职责链模式</strong><br>把请求从链中的一个对象传递到另一个对象，直到请求被响应为止。通过这种方式去除对象之间的耦合。</li>
+<li><strong>状态模式</strong><br>允许一个对象在其内部状态发生改变时改变其行为能力。</li>
+<li><strong>观察者模式</strong><br>多个对象间存在一对多关系，当一个对象发生改变时，把这种改变通知给其他多个对象，从而影响其他对象的行为。</li>
+<li><strong>中介者模式</strong><br>定义一个中介对象来简化原有对象之间的交互关系，降低系统中对象间的耦合度，使原有对象之间不必相互了解。</li>
+<li><strong>迭代器模式</strong><br>提供一种方法来顺序访问聚合对象中的一系列数据，而不暴露聚合对象的内部表示。</li>
+<li><strong>访问者模式</strong><br>在不改变集合元素的前提下，为一个集合中的每个元素提供多种访问方式，即每个元素有多个访问者对象访问。</li>
+<li><strong>备忘录模式</strong><br>在不破坏封装性的前提下，获取并保存一个对象的内部状态，以便以后恢复它。</li>
+<li><strong>解释器模式</strong><br>提供如何定义语言的文法，以及对语言句子的解释方法。</li>
+</ol>
+<p>以上11种行为型模式，除了模板方法模式和解释器模式是类行为模式，其他都是对象行为型模式。</p>
 
             </div>
             <hr />
@@ -508,9 +576,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《终于有自己的博客啦》
+                    《设计模式概述》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/05/zhong-yu-you-zi-ji-de-bo-ke-la/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/11/she-ji-mo-shi/she-ji-mo-shi-gai-shu/" property="cc:attributionName"
                rel="cc:attributionURL">
                 8gMaker
             </a> 采用
@@ -554,31 +622,33 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/07/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/">
+                <a href="/2021/12/18/sheng-huo/mei-miao-sheng-huo-zhi-zu-fang-bei-tao-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="搭建博客过程中遇到的问题">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="美妙生活之租房被套路">
                         
-                        <span class="card-title">搭建博客过程中遇到的问题</span>
+                        <span class="card-title">美妙生活之租房被套路</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、hexo d 报错fatal: unable to access &#39;https://github.com/huiminghu/huiminghu.github.io.git/&#39;: LibreSSL SSL_connect
+                            前提我和同事准备合租，前前后后找了很多地方，最后选中了一个小区，然后通过小区中介开始找房子，于是就有了下面被套路的经历。
+租房套路
+中介根据你的身份以及你的预算，给你找1套或2套特别合适的房子，然后给你报个价钱，你可能会出低一点，即便超出底
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-07
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/博客/" class="post-category" target="_blank">
-                                    博客
+                            <a href="/categories/生活/" class="post-category" target="_blank">
+                                    生活
                                 </a>
                             
                             
@@ -600,27 +670,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/05/zhong-yu-you-zi-ji-de-bo-ke-la/">
+                <a href="/2021/12/07/bo-ke/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="终于有自己的博客啦">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="搭建博客过程中遇到的问题">
                         
-                        <span class="card-title">终于有自己的博客啦</span>
+                        <span class="card-title">搭建博客过程中遇到的问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                              几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + git
+                            一、hexo d 报错fatal: unable to access &#39;https://github.com/huiminghu/huiminghu.github.io.git/&#39;: LibreSSL SSL_connect
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-07
                             </span>
                         <span class="publish-author">
                             
@@ -634,7 +704,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     

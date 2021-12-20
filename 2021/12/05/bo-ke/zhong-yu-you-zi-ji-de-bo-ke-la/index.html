@@ -4,14 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="性能优化, 8gMaker的博客">
+    <meta name="keywords" content="终于有自己的博客啦, 8gMaker的博客">
     <meta name="baidu-site-verification" content="code-GDoiV425Ps">
     <meta name="google-site-verification" content="xxx">
     <meta name="360-site-verification" content="xxx">
-    <meta name="description" content="前提最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。
-定位慢接口/慢SQL
-在代码中通过StopWatch打印代码段或接口执行时间；
-通过公司自研工具Hippo Monitor-&amp;gt;服务监控-&amp;gt;调用链监控-&amp;gt">
+    <meta name="description" content="  几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + git">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>性能优化 | 8gMaker的博客</title>
+    <title>终于有自己的博客啦 | 8gMaker的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -297,13 +294,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        性能优化
+                        终于有自己的博客啦
                     </div>
                 </div>
             </div>
@@ -426,8 +423,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/性能优化/" class="post-category" target="_blank">
-                            性能优化
+                        <a href="/categories/博客/" class="post-category" target="_blank">
+                            博客
                         </a>
                         
                     </div>
@@ -438,7 +435,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-18
+                    2021-12-05
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -452,7 +449,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    279
+                    225
                 </div>
                 
 
@@ -475,20 +472,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。</p>
-<h3 id="定位慢接口-慢SQL"><a href="#定位慢接口-慢SQL" class="headerlink" title="定位慢接口/慢SQL"></a>定位慢接口/慢SQL</h3><ol>
-<li>在代码中通过StopWatch打印代码段或接口执行时间；</li>
-<li>通过公司自研工具Hippo Monitor-&gt;服务监控-&gt;调用链监控-&gt;输入接口名称查询耗时；</li>
-<li>通过阿里巴巴开源的Java诊断工具arthas追踪各接口执行时间。</li>
-</ol>
-<h3 id="导致慢的原因及解决方案"><a href="#导致慢的原因及解决方案" class="headerlink" title="导致慢的原因及解决方案"></a>导致慢的原因及解决方案</h3><h4 id="一、粗粒度"><a href="#一、粗粒度" class="headerlink" title="一、粗粒度"></a>一、粗粒度</h4><h5 id="1-单线程处理大数据"><a href="#1-单线程处理大数据" class="headerlink" title="1. 单线程处理大数据"></a>1. 单线程处理大数据</h5><p>改完多线程处理。</p>
-<h5 id="2-某个操作-方法执行次数太多"><a href="#2-某个操作-方法执行次数太多" class="headerlink" title="2. 某个操作/方法执行次数太多"></a>2. 某个操作/方法执行次数太多</h5><p>比如我们使用easy excel导入时，在一个for循环中使用poi的CellStyle.cloneStyleFrom方法拷贝单元格样式，耗时非常严重。</p>
-<p>在for循环外面定义一个或几个变量保存拷贝过的样式，如果样式已存在，直接返回，不需要每次都拷贝。</p>
-<h4 id="二、细粒度"><a href="#二、细粒度" class="headerlink" title="二、细粒度"></a>二、细粒度</h4><h5 id="1-慢SQL"><a href="#1-慢SQL" class="headerlink" title="1. 慢SQL"></a>1. 慢SQL</h5><ul>
-<li>根据业务，优化SQL实现逻辑</li>
-<li>让SQL尽可能走索引</li>
-<li>修改SQL写法（需要一定经验或多次尝试）</li>
-</ul>
+                <p>  几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + github pages，刚开始搭建出来，觉得这页面丑爆了，于是在网上搜索是否有修改样式的教程，很幸运看到了韦阳老师开源的hexo-theme-sungod，看到了自己真正喜欢的博客的样子，于是立马star&amp;fork了这个项目，在此基础上做了简单修改，就有了我现在博客的样子。</p>
+<p>  以后我要在这个博客上写下自己的点点滴滴，这个才是真正意义上属于自己的博客！</p>
 
             </div>
             <hr />
@@ -523,9 +508,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《性能优化》
+                    《终于有自己的博客啦》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/18/xing-neng-you-hua/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/05/bo-ke/zhong-yu-you-zi-ji-de-bo-ke-la/" property="cc:attributionName"
                rel="cc:attributionURL">
                 8gMaker
             </a> 采用
@@ -569,32 +554,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/18/mei-miao-sheng-huo-zhi-zi-xi-shi-bei-kua-jiang/">
+                <a href="/2021/12/07/bo-ke/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="美妙生活之自习室被夸奖">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="搭建博客过程中遇到的问题">
                         
-                        <span class="card-title">美妙生活之自习室被夸奖</span>
+                        <span class="card-title">搭建博客过程中遇到的问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在自习室写代码，旁边的小哥哥问”您这个是Python吗？”，我说”不是，是Java开发语言”。
-他若有所思地点点头，竖起了大拇指，然后说编程是一项很需要掌握的技术。他介绍自己是做金融的，公司里面也有很多程序员，他很羡慕，说想学Python去
+                            一、hexo d 报错fatal: unable to access &#39;https://github.com/huiminghu/huiminghu.github.io.git/&#39;: LibreSSL SSL_connect
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-07
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/生活/" class="post-category" target="_blank">
-                                    生活
+                            <a href="/categories/博客/" class="post-category" target="_blank">
+                                    博客
                                 </a>
                             
                             
@@ -616,42 +600,41 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/18/mei-miao-sheng-huo-zhi-zu-fang-bei-tao-lu/">
+                <a href="/2021/12/05/bo-ke/zhong-yu-you-zi-ji-de-bo-ke-la/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="美妙生活之租房被套路">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="终于有自己的博客啦">
                         
-                        <span class="card-title">美妙生活之租房被套路</span>
+                        <span class="card-title">终于有自己的博客啦</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前提我和同事准备合租，前前后后找了很多地方，最后选中了一个小区，然后通过小区中介开始找房子，于是就有了下面被套路的经历。
-租房套路
-中介根据你的身份以及你的预算，给你找1套或2套特别合适的房子，然后给你报个价钱，你可能会出低一点，即便超出底
+                              几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + git
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/生活/" class="post-category" target="_blank">
-                                    生活
+                            <a href="/categories/博客/" class="post-category" target="_blank">
+                                    博客
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
