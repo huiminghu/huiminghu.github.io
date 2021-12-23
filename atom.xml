@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huhuiming.com/"/>
-  <updated>2021-12-18T14:32:29.776Z</updated>
+  <updated>2021-12-23T13:06:30.888Z</updated>
   <id>https://huhuiming.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单例模式</title>
+    <link href="https://huhuiming.com/2021/12/20/she-ji-mo-shi/dan-li-mo-shi/"/>
+    <id>https://huhuiming.com/2021/12/20/she-ji-mo-shi/dan-li-mo-shi/</id>
+    <published>2021-12-20T14:41:48.000Z</published>
+    <updated>2021-12-23T13:06:30.888Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、单例模式的定义与特点&quot;&gt;&lt;a href=&quot;#一、单例模式的定义与特点&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://huhuiming.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="博客" scheme="https://huhuiming.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>美妙生活之自习室被夸奖</title>
