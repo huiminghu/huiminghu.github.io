@@ -299,7 +299,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -550,7 +550,7 @@
     public static Singleton getInstance() {
         return HolderClass.instance;
     }
-}</code></pre><h2 id="五、单例模式具体应用"><a href="#五、单例模式具体应用" class="headerlink" title="五、单例模式具体应用"></a>五、单例模式具体应用</h2><h4 id="1-单例模式在JDK中的应用"><a href="#1-单例模式在JDK中的应用" class="headerlink" title="1. 单例模式在JDK中的应用"></a>1. 单例模式在JDK中的应用</h4><p>JDK 中 Runtime 类使用了单例模式，源码如下：</p>
+}</code></pre><h2 id="五、单例模式实际应用"><a href="#五、单例模式实际应用" class="headerlink" title="五、单例模式实际应用"></a>五、单例模式实际应用</h2><h4 id="1-单例模式在JDK中的应用"><a href="#1-单例模式在JDK中的应用" class="headerlink" title="1. 单例模式在JDK中的应用"></a>1. 单例模式在JDK中的应用</h4><p>JDK 中 Runtime 类使用了单例模式，源码如下：</p>
 <pre><code>public class Runtime {
     private static Runtime currentRuntime = new Runtime();
 
@@ -666,55 +666,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/20/she-ji-mo-shi/dan-li-mo-shi/">
+                <a href="/2021/12/27/she-ji-mo-shi/yuan-xing-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="单例模式">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="原型模式">
                         
-                        <span class="card-title">单例模式</span>
+                        <span class="card-title">原型模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、单例模式的定义与特点单例（Singleton）模式的定义：指一个类只有一个实例，且该类能自行创建这个实例的一种模式。
-单例模式有3个特点：
+                            一、原型模式的定义与特点原型（Prototype）模式的定义：用一个已经创建的实例作为原型，通过复制该原型对象来创建一个和原型相同或相似的新对象。
+二、原型模式的优点和缺点原型模式的优点：
 
-单例类只有一个实例对象；
-该单例对象必须由单例类自行创建；
-单例类对外提供一个访问该单例的全局
+Java 自带的原型模式基于内存二进制流的复制，
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-27
+                        </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/设计模式/" class="post-category" target="_blank">
-                                    设计模式
-                                </a>
-                            
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/博客/" target="_blank">
-                        <span class="chip bg-color">博客</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -730,7 +711,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="美妙生活之自习室被夸奖">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="美妙生活之自习室被夸奖">
                         
                         <span class="card-title">美妙生活之自习室被夸奖</span>
                     </div>
@@ -936,7 +917,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">5.5k</span>
+            <span class="white-color">6.3k</span>
             
 
             <br>

@@ -4,11 +4,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="终于有自己的博客啦, 8gMaker的博客">
+    <meta name="keywords" content="原型模式, 8gMaker的博客">
     <meta name="baidu-site-verification" content="code-GDoiV425Ps">
     <meta name="google-site-verification" content="xxx">
     <meta name="360-site-verification" content="xxx">
-    <meta name="description" content="  几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + git">
+    <meta name="description" content="一、原型模式的定义与特点原型（Prototype）模式的定义：用一个已经创建的实例作为原型，通过复制该原型对象来创建一个和原型相同或相似的新对象。
+二、原型模式的优点和缺点原型模式的优点：
+
+Java 自带的原型模式基于内存二进制流的复制，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>终于有自己的博客啦 | 8gMaker的博客</title>
+    <title>原型模式 | 8gMaker的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -294,13 +297,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        终于有自己的博客啦
+                        原型模式
                     </div>
                 </div>
             </div>
@@ -410,24 +413,11 @@
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        
-                        <a href="/tags/博客/" target="_blank">
-                            <span class="chip bg-color">博客</span>
-                        </a>
-                        
+                        <span class="chip bg-color">无标签</span>
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                        <a href="/categories/博客/" class="post-category" target="_blank">
-                            博客
-                        </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -435,7 +425,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-05
+                    2021-12-27
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -449,14 +439,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    225
+                    867
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
                 
@@ -472,9 +462,67 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>  几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + github pages，刚开始搭建出来，觉得这页面丑爆了，于是在网上搜索是否有修改样式的教程，很幸运看到了韦阳老师开源的hexo-theme-sungod，看到了自己真正喜欢的博客的样子，于是立马star&amp;fork了这个项目，在此基础上做了简单修改，就有了我现在博客的样子。</p>
-<p>  以后我要在这个博客上写下自己的点点滴滴，这个才是真正意义上属于自己的博客！</p>
+                <h2 id="一、原型模式的定义与特点"><a href="#一、原型模式的定义与特点" class="headerlink" title="一、原型模式的定义与特点"></a>一、原型模式的定义与特点</h2><p>原型（Prototype）模式的定义：用一个已经创建的实例作为原型，通过复制该原型对象来创建一个和原型相同或相似的新对象。</p>
+<h2 id="二、原型模式的优点和缺点"><a href="#二、原型模式的优点和缺点" class="headerlink" title="二、原型模式的优点和缺点"></a>二、原型模式的优点和缺点</h2><p>原型模式的优点：</p>
+<ul>
+<li>Java 自带的原型模式基于内存二进制流的复制，在性能上比直接 new 一个对象更加优良。</li>
+<li>可以使用深克隆方式保存对象的状态，使用原型模式将对象复制一份，并将其状态保存起来，简化了创建对象的过程，以便在需要的时候使用（例如恢复到历史某一状态），可辅助实现撤销操作。</li>
+</ul>
+<p>原型模式的缺点：</p>
+<ul>
+<li>需要为每一个类都配置一个 clone 方法</li>
+<li>clone 方法位于类的内部，当对已有类进行改造的时候，需要修改代码，违背了开闭原则。</li>
+<li>当实现深克隆时，需要编写较为复杂的代码，而且当对象之间存在多重嵌套引用时，为了实现深克隆，每一层对象对应的类都必须支持深克隆，实现起来会比较麻烦。</li>
+</ul>
+<h2 id="三、原型模式的应用场景"><a href="#三、原型模式的应用场景" class="headerlink" title="三、原型模式的应用场景"></a>三、原型模式的应用场景</h2><p>原型模式通常适用于以下场景。</p>
+<ul>
+<li>对象之间相同或相似，即只是个别的几个属性不同的时候。</li>
+<li>创建对象成本较大，例如初始化时间长，占用CPU太多，或者占用网络资源太多等，需要优化资源。</li>
+<li>创建一个对象需要繁琐的数据准备或访问权限等，需要提高性能或者提高安全性。</li>
+<li>系统中大量使用该类对象，且各个调用者都需要给它的属性重新赋值。</li>
+</ul>
+<h2 id="四、原型模式的结构与实现"><a href="#四、原型模式的结构与实现" class="headerlink" title="四、原型模式的结构与实现"></a>四、原型模式的结构与实现</h2><h3 id="1-原型模式的结构"><a href="#1-原型模式的结构" class="headerlink" title="1. 原型模式的结构"></a>1. 原型模式的结构</h3><p>原型模式的主要角色如下：</p>
+<ul>
+<li>抽象原型类：规定了具体原型对象必须实现的接口。</li>
+<li>具体原型类：实现抽象原型类的 clone() 方法，它是可被复制的对象。</li>
+<li>访问类：使用具体原型类中的 clone() 方法来复制新的对象。</li>
+</ul>
+<h3 id="2-原型模式的实现"><a href="#2-原型模式的实现" class="headerlink" title="2. 原型模式的实现"></a>2. 原型模式的实现</h3><p>原型模式的克隆分为浅克隆和深克隆。</p>
+<ul>
+<li>浅克隆：创建一个新对象，新对象的属性和原来对象完全相同，对于非基本类型属性，仍指向原有属性所指向的对象的内存地址。</li>
+<li>深克隆：创建一个新对象，属性中引用的其他对象也会被克隆，不再指向原有对象地址。</li>
+</ul>
+<p>Java 中的 Object 类提供了浅克隆的 clone() 方法，具体原型类只要实现 Cloneable 接口就可实现对象的浅克隆，这里的 Cloneable 接口就是抽象原型类。其代码如下：</p>
+<pre><code>// 具体原型类
+class Realizetype implements Cloneable {
+    Realizetype() {
+        System.out.println(&quot;具体原型创建成功！&quot;);
+    }
 
+    public Object clone() throws CloneNotSupportedException {
+        System.out.println(&quot;具体原型复制成功！&quot;);
+        return (Realizetype) super.clone();
+    }
+}
+
+// 原型模式的测试类
+public class PrototypeTest {
+    public static void main(String[] args) throws CloneNotSupportedException {
+        Realizetype obj1 = new Realizetype();
+        Realizetype obj2 = (Realizetype) obj1.clone();
+        System.out.println(&quot;obj1==obj2?&quot; + (obj1 == obj2));
+    }
+}</code></pre><h2 id="五、原型模式实际应用"><a href="#五、原型模式实际应用" class="headerlink" title="五、原型模式实际应用"></a>五、原型模式实际应用</h2><h4 id="1-原型模式在JDK源码中的应用"><a href="#1-原型模式在JDK源码中的应用" class="headerlink" title="1. 原型模式在JDK源码中的应用"></a>1. 原型模式在JDK源码中的应用</h4><p>ArrayList的clone方法，代码如下：</p>
+<pre><code>public Object clone() {
+    try {
+        ArrayList&lt;?&gt; v = (ArrayList&lt;?&gt;) super.clone();
+        v.elementData = Arrays.copyOf(elementData, size);
+        v.modCount = 0;
+        return v;
+    } catch (CloneNotSupportedException e) {
+        throw new InternalError(e);
+    }
+}</code></pre>
             </div>
             <hr />
 
@@ -508,9 +556,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《终于有自己的博客啦》
+                    《原型模式》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/05/bo-ke/zhong-yu-you-zi-ji-de-bo-ke-la/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/27/she-ji-mo-shi/yuan-xing-mo-shi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 8gMaker
             </a> 采用
@@ -550,49 +598,39 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/07/bo-ke/da-jian-bo-ke-guo-cheng-zhong-yu-dao-de-wen-ti/">
+                <a href="/2021/12/27/she-ji-mo-shi/yuan-xing-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="搭建博客过程中遇到的问题">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="原型模式">
                         
-                        <span class="card-title">搭建博客过程中遇到的问题</span>
+                        <span class="card-title">原型模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、hexo d 报错fatal: unable to access &#39;https://github.com/huiminghu/huiminghu.github.io.git/&#39;: LibreSSL SSL_connect
+                            一、原型模式的定义与特点原型（Prototype）模式的定义：用一个已经创建的实例作为原型，通过复制该原型对象来创建一个和原型相同或相似的新对象。
+二、原型模式的优点和缺点原型模式的优点：
+
+Java 自带的原型模式基于内存二进制流的复制，
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-27
+                            </span>
                         <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/博客/" class="post-category" target="_blank">
-                                    博客
-                                </a>
-                            
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/博客/" target="_blank">
-                        <span class="chip bg-color">博客</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -600,41 +638,45 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/05/bo-ke/zhong-yu-you-zi-ji-de-bo-ke-la/">
+                <a href="/2021/12/20/she-ji-mo-shi/dan-li-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="终于有自己的博客啦">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="单例模式">
                         
-                        <span class="card-title">终于有自己的博客啦</span>
+                        <span class="card-title">单例模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                              几年前开始写博客，试过在知乎、简书等公共博客平台写作，但是上面的排版实在不符合自己的”审美”，于是开始折腾自己搭建，试过halo、mblog这些开源的博客框架，也在其基础上做了改进，但是始终达不到自己的要求。而后转战hexo + git
+                            一、单例模式的定义与特点单例（Singleton）模式的定义：指一个类只有一个实例，且该类能自行创建这个实例的一种模式。
+单例模式有3个特点：
+
+单例类只有一个实例对象；
+该单例对象必须由单例类自行创建；
+单例类对外提供一个访问该单例的全局
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/博客/" class="post-category" target="_blank">
-                                    博客
+                            <a href="/categories/设计模式/" class="post-category" target="_blank">
+                                    设计模式
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
