@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://huhuiming.com/"/>
-  <updated>2021-12-27T13:57:23.036Z</updated>
+  <updated>2021-12-28T00:47:12.028Z</updated>
   <id>https://huhuiming.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>原型模式</title>
-    <link href="https://huhuiming.com/2021/12/27/she-ji-mo-shi/yuan-xing-mo-shi/"/>
-    <id>https://huhuiming.com/2021/12/27/she-ji-mo-shi/yuan-xing-mo-shi/</id>
-    <published>2021-12-27T13:12:52.000Z</published>
-    <updated>2021-12-27T13:57:23.036Z</updated>
+    <title>简单工厂模式</title>
+    <link href="https://huhuiming.com/2021/12/28/she-ji-mo-shi/jian-dan-gong-han-mo-shi/"/>
+    <id>https://huhuiming.com/2021/12/28/she-ji-mo-shi/jian-dan-gong-han-mo-shi/</id>
+    <published>2021-12-28T00:24:36.000Z</published>
+    <updated>2021-12-28T00:47:12.028Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,33 @@
       
         
         
-          &lt;h2 id=&quot;一、原型模式的定义与特点&quot;&gt;&lt;a href=&quot;#一、原型模式的定义与特点&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;一、工厂模式概述&quot;&gt;&lt;a href=&quot;#一、工厂模式概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="https://huhuiming.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="博客" scheme="https://huhuiming.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原型模式</title>
+    <link href="https://huhuiming.com/2021/12/27/she-ji-mo-shi/yuan-xing-mo-shi/"/>
+    <id>https://huhuiming.com/2021/12/27/she-ji-mo-shi/yuan-xing-mo-shi/</id>
+    <published>2021-12-27T13:12:52.000Z</published>
+    <updated>2021-12-28T00:25:26.897Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、原型模式的定义&quot;&gt;&lt;a href=&quot;#一、原型模式的定义&quot; class=&quot;headerlink&quot;
         
       
     
