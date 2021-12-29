@@ -9,9 +9,9 @@
     <meta name="google-site-verification" content="xxx">
     <meta name="360-site-verification" content="xxx">
     <meta name="description" content="一、原型模式的定义原型（Prototype）模式的定义：用一个已经创建的实例作为原型，通过复制该原型对象来创建一个和原型相同或相似的新对象。
-二、原型模式的优点和缺点原型模式的优点：
+二、原型模式的优点和缺点优点：
 
-Java 自带的原型模式基于内存二进制流的复制，在性能">
+Java 自带的原型模式基于内存二进制流的复制，在性能上比直接 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -297,7 +297,7 @@ Java 自带的原型模式基于内存二进制流的复制，在性能">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -452,7 +452,7 @@ Java 自带的原型模式基于内存二进制流的复制，在性能">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    864
+                    855
                 </div>
                 
 
@@ -476,12 +476,12 @@ Java 自带的原型模式基于内存二进制流的复制，在性能">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="一、原型模式的定义"><a href="#一、原型模式的定义" class="headerlink" title="一、原型模式的定义"></a>一、原型模式的定义</h2><p>原型（Prototype）模式的定义：用一个已经创建的实例作为原型，通过复制该原型对象来创建一个和原型相同或相似的新对象。</p>
-<h2 id="二、原型模式的优点和缺点"><a href="#二、原型模式的优点和缺点" class="headerlink" title="二、原型模式的优点和缺点"></a>二、原型模式的优点和缺点</h2><p>原型模式的优点：</p>
+<h2 id="二、原型模式的优点和缺点"><a href="#二、原型模式的优点和缺点" class="headerlink" title="二、原型模式的优点和缺点"></a>二、原型模式的优点和缺点</h2><p>优点：</p>
 <ul>
 <li>Java 自带的原型模式基于内存二进制流的复制，在性能上比直接 new 一个对象更加优良。</li>
 <li>可以使用深克隆方式保存对象的状态，使用原型模式将对象复制一份，并将其状态保存起来，简化了创建对象的过程，以便在需要的时候使用（例如恢复到历史某一状态），可辅助实现撤销操作。</li>
 </ul>
-<p>原型模式的缺点：</p>
+<p>缺点：</p>
 <ul>
 <li>需要为每一个类都配置一个 clone 方法</li>
 <li>clone 方法位于类的内部，当对已有类进行改造的时候，需要修改代码，违背了开闭原则。</li>
@@ -525,7 +525,7 @@ public class PrototypeTest {
         Realizetype obj2 = (Realizetype) obj1.clone();
         System.out.println(&quot;obj1==obj2?&quot; + (obj1 == obj2));
     }
-}</code></pre><h2 id="五、原型模式实际应用"><a href="#五、原型模式实际应用" class="headerlink" title="五、原型模式实际应用"></a>五、原型模式实际应用</h2><h4 id="1-原型模式在JDK源码中的应用"><a href="#1-原型模式在JDK源码中的应用" class="headerlink" title="1. 原型模式在JDK源码中的应用"></a>1. 原型模式在JDK源码中的应用</h4><p>ArrayList的clone方法，代码如下：</p>
+}</code></pre><h2 id="五、原型模式的实际应用"><a href="#五、原型模式的实际应用" class="headerlink" title="五、原型模式的实际应用"></a>五、原型模式的实际应用</h2><h4 id="1-原型模式在JDK源码中的应用"><a href="#1-原型模式在JDK源码中的应用" class="headerlink" title="1. 原型模式在JDK源码中的应用"></a>1. 原型模式在JDK源码中的应用</h4><p>ArrayList的clone方法，代码如下：</p>
 <pre><code>public Object clone() {
     try {
         ArrayList&lt;?&gt; v = (ArrayList&lt;?&gt;) super.clone();
@@ -619,7 +619,7 @@ public class PrototypeTest {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="简单工厂模式">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="简单工厂模式">
                         
                         <span class="card-title">简单工厂模式</span>
                     </div>
@@ -668,7 +668,7 @@ public class PrototypeTest {
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="单例模式">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="单例模式">
                         
                         <span class="card-title">单例模式</span>
                     </div>
@@ -878,7 +878,7 @@ public class PrototypeTest {
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">7.6k</span>
+            <span class="white-color">9.7k</span>
             
 
             <br>

@@ -4,14 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="性能优化, 8gMaker的博客">
+    <meta name="keywords" content="工厂方法模式, 8gMaker的博客">
     <meta name="baidu-site-verification" content="code-GDoiV425Ps">
     <meta name="google-site-verification" content="xxx">
     <meta name="360-site-verification" content="xxx">
-    <meta name="description" content="前提最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。
-定位慢接口/慢SQL
-在代码中通过StopWatch打印代码段或接口执行时间；
-通过公司自研工具Hippo Monitor-&amp;gt;服务监控-&amp;gt;调用链监控-&amp;gt">
+    <meta name="description" content="一、工厂方法模式概述在现实生活中社会分工越来越细，越来越专业化。各种产品有专门的工厂生产，彻底告别了自给自足的小农经济时代，这大大缩短了产品的生产周期，提高了生产效率。同样，在软件开发中能否做到软件对象的生产和使用相分离呢？能否在满足“开闭">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>性能优化 | 8gMaker的博客</title>
+    <title>工厂方法模式 | 8gMaker的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -297,13 +294,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        性能优化
+                        工厂方法模式
                     </div>
                 </div>
             </div>
@@ -426,8 +423,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/性能优化/" class="post-category" target="_blank">
-                            性能优化
+                        <a href="/categories/设计模式/" class="post-category" target="_blank">
+                            设计模式
                         </a>
                         
                     </div>
@@ -438,7 +435,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-18
+                    2021-12-28
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -452,14 +449,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    279
+                    909
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
                 
@@ -475,21 +472,85 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>最近公司项目性能问题很多，在解决的过程中总结了一些性能优化的经验。</p>
-<h3 id="定位慢接口-慢SQL"><a href="#定位慢接口-慢SQL" class="headerlink" title="定位慢接口/慢SQL"></a>定位慢接口/慢SQL</h3><ol>
-<li>在代码中通过StopWatch打印代码段或接口执行时间；</li>
-<li>通过公司自研工具Hippo Monitor-&gt;服务监控-&gt;调用链监控-&gt;输入接口名称查询耗时；</li>
-<li>通过阿里巴巴开源的Java诊断工具arthas追踪各接口执行时间。</li>
-</ol>
-<h3 id="导致慢的原因及解决方案"><a href="#导致慢的原因及解决方案" class="headerlink" title="导致慢的原因及解决方案"></a>导致慢的原因及解决方案</h3><h4 id="一、粗粒度"><a href="#一、粗粒度" class="headerlink" title="一、粗粒度"></a>一、粗粒度</h4><h5 id="1-单线程处理大数据"><a href="#1-单线程处理大数据" class="headerlink" title="1. 单线程处理大数据"></a>1. 单线程处理大数据</h5><p>改完多线程处理。</p>
-<h5 id="2-某个操作-方法执行次数太多"><a href="#2-某个操作-方法执行次数太多" class="headerlink" title="2. 某个操作/方法执行次数太多"></a>2. 某个操作/方法执行次数太多</h5><p>比如我们使用easy excel导入时，在一个for循环中使用poi的CellStyle.cloneStyleFrom方法拷贝单元格样式，耗时非常严重。</p>
-<p>在for循环外面定义一个或几个变量保存拷贝过的样式，如果样式已存在，直接返回，不需要每次都拷贝。</p>
-<h4 id="二、细粒度"><a href="#二、细粒度" class="headerlink" title="二、细粒度"></a>二、细粒度</h4><h5 id="1-慢SQL"><a href="#1-慢SQL" class="headerlink" title="1. 慢SQL"></a>1. 慢SQL</h5><ul>
-<li>根据业务，优化SQL实现逻辑</li>
-<li>让SQL尽可能走索引</li>
-<li>修改SQL写法（需要一定经验或多次尝试）</li>
+                <h2 id="一、工厂方法模式概述"><a href="#一、工厂方法模式概述" class="headerlink" title="一、工厂方法模式概述"></a>一、工厂方法模式概述</h2><p>在现实生活中社会分工越来越细，越来越专业化。各种产品有专门的工厂生产，彻底告别了自给自足的小农经济时代，这大大缩短了产品的生产周期，提高了生产效率。同样，在软件开发中能否做到软件对象的生产和使用相分离呢？能否在满足“开闭原则”的前提下，客户随意增删或改变对软件相关对象的使用呢？</p>
+<p>简单工厂模式违背了开闭原则，而“工厂方法模式”是对简单工厂模式的进一步抽象化，其好处是可以使系统在不修改原来代码的情况下引进新的产品，即满足开闭原则。</p>
+<h2 id="二、工厂方法模式的优点和缺点"><a href="#二、工厂方法模式的优点和缺点" class="headerlink" title="二、工厂方法模式的优点和缺点"></a>二、工厂方法模式的优点和缺点</h2><p>优点：</p>
+<ul>
+<li>用户只需要知道具体工厂的名称就可得到所要的产品，无须知道产品的具体创建过程。</li>
+<li>灵活性增强，对于新产品的创建，只需多写一个相应的工厂类。</li>
+<li>典型的解耦框架。高层模块只需要知道产品的抽象类，无须关心其他实现类，满足迪米特法则、依赖倒置原则和里氏替换原则。</li>
 </ul>
+<p>缺点：</p>
+<ul>
+<li>类的个数容易过多，增加复杂度。</li>
+<li>增加了系统的抽象性和理解难度。</li>
+<li>抽象产品只能生产一种产品，此弊端可使用抽象工厂模式解决。</li>
+</ul>
+<h2 id="三、工厂方法模式的应用场景"><a href="#三、工厂方法模式的应用场景" class="headerlink" title="三、工厂方法模式的应用场景"></a>三、工厂方法模式的应用场景</h2><ul>
+<li>客户只知道创建产品的工厂名，而不知道具体的产品名。如 TCL 电视工厂、海信电视工厂等。</li>
+<li>创建对象的任务由多个具体子工厂中的某一个完成，而抽象工厂只提供创建产品的接口。</li>
+<li>客户不关心创建产品的细节，只关心产品的品牌。</li>
+</ul>
+<h2 id="四、工厂方法模式的结构与实现"><a href="#四、工厂方法模式的结构与实现" class="headerlink" title="四、工厂方法模式的结构与实现"></a>四、工厂方法模式的结构与实现</h2><h3 id="1-工厂方法模式的结构"><a href="#1-工厂方法模式的结构" class="headerlink" title="1. 工厂方法模式的结构"></a>1. 工厂方法模式的结构</h3><p>工厂方法模式的主要角色如下：</p>
+<ul>
+<li>抽象工厂（Abstract Factory）：提供了创建产品的接口，调用者通过它访问具体工厂的工厂方法 newProduct() 来创建产品。</li>
+<li>具体工厂（ConcreteFactory）：主要是实现抽象工厂中的抽象方法，完成具体产品的创建。</li>
+<li>抽象产品（Product）：定义了产品的规范，描述了产品的主要特性和功能。</li>
+<li>具体产品（ConcreteProduct）：实现了抽象产品角色所定义的接口，由具体工厂来创建，它同具体工厂之间一一对应。</li>
+</ul>
+<h3 id="2-工厂方法模式的实现"><a href="#2-工厂方法模式的实现" class="headerlink" title="2. 工厂方法模式的实现"></a>2. 工厂方法模式的实现</h3><pre><code>public class AbstractFactoryTest {
+    public static void main(String[] args) {
+        try {
+            Product a;
+            AbstractFactory af;
+            af = (AbstractFactory) ReadXML1.getObject();
+            a = af.newProduct();
+            a.show();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
 
+//抽象产品：提供了产品的接口
+interface Product {
+    public void show();
+}
+
+//具体产品1：实现抽象产品中的抽象方法
+class ConcreteProduct1 implements Product {
+    public void show() {
+        System.out.println(&quot;具体产品1显示...&quot;);
+    }
+}
+
+//具体产品2：实现抽象产品中的抽象方法
+class ConcreteProduct2 implements Product {
+    public void show() {
+        System.out.println(&quot;具体产品2显示...&quot;);
+    }
+}
+
+//抽象工厂：提供了厂品的生成方法
+interface AbstractFactory {
+    public Product newProduct();
+}
+
+//具体工厂1：实现了厂品的生成方法
+class ConcreteFactory1 implements AbstractFactory {
+    public Product newProduct() {
+        System.out.println(&quot;具体工厂1生成--&gt;具体产品1...&quot;);
+        return new ConcreteProduct1();
+    }
+}
+
+//具体工厂2：实现了厂品的生成方法
+class ConcreteFactory2 implements AbstractFactory {
+    public Product newProduct() {
+        System.out.println(&quot;具体工厂2生成--&gt;具体产品2...&quot;);
+        return new ConcreteProduct2();
+    }
+}</code></pre><h2 id="五、工厂方法模式的实际应用"><a href="#五、工厂方法模式的实际应用" class="headerlink" title="五、工厂方法模式的实际应用"></a>五、工厂方法模式的实际应用</h2>
             </div>
             <hr />
 
@@ -523,9 +584,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《性能优化》
+                    《工厂方法模式》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/18/xing-neng-you-hua/xing-neng-you-hua/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/12/28/she-ji-mo-shi/gong-han-fang-fa-mo-shi/" property="cc:attributionName"
                rel="cc:attributionURL">
                 8gMaker
             </a> 采用
@@ -569,32 +630,32 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/18/sheng-huo/mei-miao-sheng-huo-zhi-zi-xi-shi-bei-kua-jiang/">
+                <a href="/2021/12/28/she-ji-mo-shi/chou-xiang-gong-han-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="美妙生活之自习室被夸奖">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="抽象工厂模式">
                         
-                        <span class="card-title">美妙生活之自习室被夸奖</span>
+                        <span class="card-title">抽象工厂模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在自习室写代码，旁边的小哥哥问”您这个是Python吗？”，我说”不是，是Java开发语言”。
-他若有所思地点点头，竖起了大拇指，然后说编程是一项很需要掌握的技术。他介绍自己是做金融的，公司里面也有很多程序员，他很羡慕，说想学Python去
+                            一、抽象工厂模式概述工厂方法模式考虑的是一类产品的生产，如畜牧场只养动物、电视机厂只生产电视机、计算机软件学院只培养计算机软件专业的学生等。
+同种类称为同等级，也就是说：工厂方法模式只考虑生产同等级的产品，但是在现实生活中许多工厂是综合型的
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-28
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/生活/" class="post-category" target="_blank">
-                                    生活
+                            <a href="/categories/设计模式/" class="post-category" target="_blank">
+                                    设计模式
                                 </a>
                             
                             
@@ -619,33 +680,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/18/sheng-huo/mei-miao-sheng-huo-zhi-zu-fang-bei-tao-lu/">
+                <a href="/2021/12/28/she-ji-mo-shi/jian-dan-gong-han-mo-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="美妙生活之租房被套路">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="简单工厂模式">
                         
-                        <span class="card-title">美妙生活之租房被套路</span>
+                        <span class="card-title">简单工厂模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前提我和同事准备合租，前前后后找了很多地方，最后选中了一个小区，然后通过小区中介开始找房子，于是就有了下面被套路的经历。
-租房套路
-中介根据你的身份以及你的预算，给你找1套或2套特别合适的房子，然后给你报个价钱，你可能会出低一点，即便超出底
+                            一、工厂模式概述现实生活中，原始社会自给自足（没有工厂），农耕社会小作坊（简单工厂，民间酒坊），工业革命流水线（工厂方法，自产自销），现代产业链代工厂（抽象工厂，富士康）。我们的项目代码同样是由简到繁一步一步迭代而来的，但对于调用者来说，却
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-12-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/生活/" class="post-category" target="_blank">
-                                    生活
+                            <a href="/categories/设计模式/" class="post-category" target="_blank">
+                                    设计模式
                                 </a>
                             
                             
