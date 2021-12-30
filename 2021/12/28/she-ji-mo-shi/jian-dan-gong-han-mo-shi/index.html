@@ -294,7 +294,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -449,14 +449,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
                 
@@ -546,7 +546,65 @@
             return null;
         }
     }
-}</code></pre><h2 id="六、简单工厂模式的实际应用"><a href="#六、简单工厂模式的实际应用" class="headerlink" title="六、简单工厂模式的实际应用"></a>六、简单工厂模式的实际应用</h2>
+}</code></pre><h2 id="六、简单工厂模式的实际应用"><a href="#六、简单工厂模式的实际应用" class="headerlink" title="六、简单工厂模式的实际应用"></a>六、简单工厂模式的实际应用</h2><h4 id="1-简单工厂模式在JDK源码中的应用"><a href="#1-简单工厂模式在JDK源码中的应用" class="headerlink" title="1. 简单工厂模式在JDK源码中的应用"></a>1. 简单工厂模式在JDK源码中的应用</h4><p>简单工厂模式在 JDK 源码中无处不在，下面以 Calendar 类为例讲解简单工厂模式在 JDK 源码中的应用。Calendar 类的 getInstance() 方法源码如下：</p>
+<pre><code>public static Calendar getInstance(TimeZone zone, Locale aLocale){
+    return createCalendar(zone, aLocale);
+}</code></pre><p>进入 createCalendar() 方法中，源码如下：</p>
+<pre><code>private static Calendar createCalendar(TimeZone zone, Locale aLocale) {
+    CalendarProvider provider =
+        LocaleProviderAdapter.getAdapter(CalendarProvider.class, aLocale)
+                             .getCalendarProvider();
+    if (provider != null) {
+        try {
+            return provider.getInstance(zone, aLocale);
+        } catch (IllegalArgumentException iae) {
+            // fall back to the default instantiation
+        }
+    }
+
+    Calendar cal = null;
+
+    if (aLocale.hasExtensions()) {
+        String caltype = aLocale.getUnicodeLocaleType(&quot;ca&quot;);
+        if (caltype != null) {
+            switch (caltype) {
+            case &quot;buddhist&quot;:
+            cal = new BuddhistCalendar(zone, aLocale);
+                break;
+            case &quot;japanese&quot;:
+                cal = new JapaneseImperialCalendar(zone, aLocale);
+                break;
+            case &quot;gregory&quot;:
+                cal = new GregorianCalendar(zone, aLocale);
+                break;
+            }
+        }
+    }
+    if (cal == null) {
+        // If no known calendar type is explicitly specified,
+        // perform the traditional way to create a Calendar:
+        // create a BuddhistCalendar for th_TH locale,
+        // a JapaneseImperialCalendar for ja_JP_JP locale, or
+        // a GregorianCalendar for any other locales.
+        // NOTE: The language, country and variant strings are interned.
+        if (aLocale.getLanguage() == &quot;th&quot; &amp;&amp; aLocale.getCountry() == &quot;TH&quot;) {
+            cal = new BuddhistCalendar(zone, aLocale);
+        } else if (aLocale.getVariant() == &quot;JP&quot; &amp;&amp; aLocale.getLanguage() == &quot;ja&quot;
+                   &amp;&amp; aLocale.getCountry() == &quot;JP&quot;) {
+            cal = new JapaneseImperialCalendar(zone, aLocale);
+        } else {
+            cal = new GregorianCalendar(zone, aLocale);
+        }
+    }
+    return cal;
+}</code></pre><h4 id="2-简单工厂模式在Logback源码中的应用"><a href="#2-简单工厂模式在Logback源码中的应用" class="headerlink" title="2. 简单工厂模式在Logback源码中的应用"></a>2. 简单工厂模式在Logback源码中的应用</h4><p>在大家经常使用的 Logback 中，也可以看到 LoggerFactory 中有多个重载的方法 getLogger()。</p>
+<pre><code>public static Logger getLogger(String name){
+    ILoggerFactory iLoggerFactory = getILoggerFactory();
+    return iLoggerFactory.getLogger(name);
+}
+public static Logger getLogger(Class clazz){
+    return getLogger(clazz.getName());
+}</code></pre>
             </div>
             <hr />
 
@@ -630,7 +688,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="工厂方法模式">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="工厂方法模式">
                         
                         <span class="card-title">工厂方法模式</span>
                     </div>
@@ -679,7 +737,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="原型模式">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="原型模式">
                         
                         <span class="card-title">原型模式</span>
                     </div>
@@ -887,7 +945,7 @@ Java 自带的原型模式基于内存二进制流的复制，在性能上比直
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">9.7k</span>
+            <span class="white-color">10k</span>
             
 
             <br>
