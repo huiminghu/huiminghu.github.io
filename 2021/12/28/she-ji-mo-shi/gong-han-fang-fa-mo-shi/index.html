@@ -449,14 +449,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    909
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
                 
@@ -550,7 +550,48 @@ class ConcreteFactory2 implements AbstractFactory {
         System.out.println(&quot;具体工厂2生成--&gt;具体产品2...&quot;);
         return new ConcreteProduct2();
     }
-}</code></pre><h2 id="五、工厂方法模式的实际应用"><a href="#五、工厂方法模式的实际应用" class="headerlink" title="五、工厂方法模式的实际应用"></a>五、工厂方法模式的实际应用</h2>
+}</code></pre><h2 id="五、工厂方法模式的实际应用"><a href="#五、工厂方法模式的实际应用" class="headerlink" title="五、工厂方法模式的实际应用"></a>五、工厂方法模式的实际应用</h2><h4 id="1-工厂方法模式在Logback源码中的应用"><a href="#1-工厂方法模式在Logback源码中的应用" class="headerlink" title="1. 工厂方法模式在Logback源码中的应用"></a>1. 工厂方法模式在Logback源码中的应用</h4><p>在 Log 类中，抽象产品基类就是 Log，其中一个产品实现类为 LoggerLog，抽象工厂类为 LogFactory，工厂实现类为 LoggerLogFactory。另一个是 LogStreamLog 和 LogStreamLogFactory。其中关键代码如下:</p>
+<pre><code>public abstract class Log {
+    ... ...
+    public abstract void log(Level var1, String var2);
+
+    private interface LogFactory {
+        Log createLog(String var1, String var2, Level var3);
+    }
+
+    private static class LoggerLog extends Log {
+        public void log(Level var1, String var2) {
+            if (this.isLoggable(var1)) {
+                String[] var3 = Log.getSource();
+                this.logger.logp(var1, var3[0], var3[1], Thread.currentThread().getName() + &quot;: &quot; + var2);
+            }
+        }
+    }
+    private static class LoggerLogFactory implements Log.LogFactory {
+        public Log createLog(String var1, String var2, Level var3) {
+            Logger var4 = Logger.getLogger(var1);
+            return new Log.LoggerLog(var4, var3);
+        }
+    }
+
+    private static class LogStreamLog extends Log {
+        public void log(Level var1, String var2) {
+            if (this.isLoggable(var1)) {
+                String[] var3 = Log.getSource();
+                this.stream.println(unqualifiedName(var3[0]) + &quot;.&quot; + var3[1] + &quot;: &quot; + var2);
+            }
+        }
+    }
+    private static class LogStreamLogFactory implements Log.LogFactory {
+        public Log createLog(String var1, String var2, Level var3) {
+            LogStream var4 = null;
+            if (var2 != null) {
+                var4 = LogStream.log(var2);
+            }
+            return new Log.LogStreamLog(var4, var3);
+        }
+    }
+}</code></pre>
             </div>
             <hr />
 
@@ -889,7 +930,7 @@ class ConcreteFactory2 implements AbstractFactory {
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">10k</span>
+            <span class="white-color">10.2k</span>
             
 
             <br>
